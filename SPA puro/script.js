@@ -18,3 +18,9 @@ document.getElementById('irParaPagina1').addEventListener('click',
 function(){
     exibirPagina('pagina1')
 })
+
+document.getElementById('irParaPagina3').addEventListener('click',
+    function(){
+        exibirPagina('pagina3')
+    }
+)
