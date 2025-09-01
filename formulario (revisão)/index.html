@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aula Revisão de HTML</title>
+        <link rel="stylesheet" href="estilo.css" />
+        <style>
+            label{
+                font-weight: bold;
+                color: #006115;
+            }
+            input{
+                margin: 10px 0px 10px 0px;
+            }
+            table{
+                border: 1px dotted black;
+                border-collapse: collapse;
+            }
+            td, th, tr {
+                text-align: center;
+                border:1px dotted black;
+                border-collapse: collapse;
+                padding: 5px;
+            }
+            tr:hover{
+                background-color: #ff0bde;
+            }
+            .direita{
+                text-align: right;
+            }
+        </style>
+    </head>
+    <body>
+        <table border="1" cellspacing="5px" cellpadding="5px" WIDTH="100%">
+            <tr>
+                <tH COLSPAN="4">PRODUTOS</tH>
+            </tr>
+            <tr>
+                <tH WIDTH="50PX">Cod</tH>
+                <tH>Descricao</tH>
+                <tH>Valor Unitario</tH>
+                <tH>Quantidade</tH>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Mouse</td>
+                <td class="direita">R$30,00</td>
+                <td rowspan="2" STYLE="text-align: right;"> 5 </td>
+            </tr>
+            <tr><td>2</td><td>Teclado</td><td>R$10,00</td></tr>
+            <tr>
+                <td>3</td>
+                <td>Monitor</td>
+                <td>R$350,00</td>
+                <td>10</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <table>
+            <tr>
+                <th colspan="3">Contato dos alunos</th>
+            </tr>
+            <tr>
+                <th>RA</th>
+                <th>NOME</th>
+                <th>Telefone</th>
+            </tr>
+            <tr>
+                <td>294079251000</td>
+                <td>Fulano</td>
+                <td rowspan="2">(11) 9 7777-6666</td>
+            </tr>
+            <tr>
+                <td>294079251111</td>
+                <td>Ciclano</td>
+                <!-- <td>(11) 9 7777-6666</td> -->
+            </tr>
+            <tr>
+                <td>294079251222</td>
+                <td>Beltrano</td>
+                <td>(11) 9 6666-5555</td>
+            </tr>
+        </table>
+        <hr>
+        <form action="destino.php" method="get">
+            <label for="txtNome">
+                Nome:
+            </label>
+            <input type="text" name="txtNome" minlength="5" required/>
+            
+
+            <label for="txtIdade">Idade:</label>
+            <input type="number" step="1" min="0" max="100" name="txtIdade" />
+            
+
+            E-mail:
+            <input type="email" name="txtEmail" required />
+            
+
+
+            Periodo: 
+
+            <input type="radio" name="rdbPeriodo" value="M"/> Manhã 
+
+            <input type="radio" name="rdbPeriodo" value="T"/> Tarde 
+
+            <input type="radio" name="rdbPeriodo" value="N" checked/> Noite 
+
+            
+
+
+            <input type="checkbox" name="chkEstagio" />
+            Estagio: (o aluno esta estagiando ?)
+            
+            
+
+
+            <input type="checkbox" name="chkEmprego" checked/>
+            Empregado: (o aluno exerce atividade relativa a formacao com vinculo CLT)?
+            
+            
+
+            Selecione o meio de transporte:
+            <select name="cmbTransporte">
+                <option value="">Nao Informado</option>
+                <option value="o" selected> Onibus</option>
+                <option value="t"> Trem  </option>
+                <option value="c"> Carro </option>
+                <option value="m"> Moto  </option>
+                <option value="a"> A pe  </option>
+            </select>
+
+            
+
+            Observacoes Gerais: 
+
+            <textarea name="txtObservacoes" cols="40"></textarea>
+
+            
+
+
+            <input type="submit" value="Cadastrar"/>
+            <input type="reset" value="Limpar" />
+        </form>
+    </body>
+</html>
+ 
