@@ -1,0 +1,11 @@
+.conteudo {
+    text-align: center;
+}
+
+.pagina {
+    display: none;
+}
+
+.ativo {
+    display: block;
+}
